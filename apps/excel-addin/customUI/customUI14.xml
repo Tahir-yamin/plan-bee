@@ -1,0 +1,155 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+  <ribbon>
+    <tabs>
+      <tab id="tabPlanBee" label="🐝 PlanBee Tool" insertAfterMso="TabHome">
+        <group id="grpMain" label="WBS Actions">
+          <button id="btnColor" label="Color WBS" image="WBS_x0020_Coloring" size="large" onAction="RibbonCallbacks.OnColorBtn" supertip="Automatically colors the WBS rows based on their level for better visualization."/>
+          <button id="btnCustomizeColor" label="Customize Colors" image="color-customization-icon" size="normal" onAction="RibbonCallbacks.OnCustomizeColorBtn" supertip="Customize the colors used for each WBS level."/>
+          <menu id="mnuGroup" label="Group WBS" imageMso="OutlineGroup" size="normal" supertip="Group or Ungroup WBS rows.">
+            <button id="btnGroup" label="Group" imageMso="OutlineGroup" onAction="RibbonCallbacks.OnGroupBtn" supertip="Groups the WBS rows based on their hierarchy."/>
+            <button id="btnUngroup" label="Ungroup" imageMso="OutlineUngroup" onAction="RibbonCallbacks.OnUngroupBtn" supertip="Ungroups all WBS rows."/>
+          </menu>
+          <button id="btnSum" label="Sum WBS" image="SUM" size="normal" onAction="RibbonCallbacks.OnSumBtn" supertip="Calculates the sum of costs/units for WBS levels based on child activities."/>
+        </group>
+        <group id="grpFlowCharts" label="Charts">
+          <menu id="mnuFlowCharts" label="Flow Charts" imageMso="OrganizationChartInsert" size="large" supertip="Generate various flow charts.">
+            <button id="btnFlowChart" label="Relation Flow Chart" image="relation_x0020_flow_x0020_chart" onAction="RibbonCallbacks.OnFlowChartBtn" supertip="Creates a flow chart visualizing activity relationships."/>
+            <button id="btnWBSFlowChart" label="WBS Flow Chart" image="wbs-classic" onAction="RibbonCallbacks.OnWBSFlowChartBtn" supertip="Creates a flow chart visualizing the WBS hierarchy."/>
+            <button id="btnActivityCodeFlowChart" label="Activity Code Flow Chart" image="Relation_x0020_Act" onAction="RibbonCallbacks.OnActivityCodeFlowChartBtn" supertip="Creates a flow chart based on Activity Codes."/>
+          </menu>
+          <button id="btnGanttChart" label="Create Gantt Chart" image="gantt-logo-primary" size="normal" onAction="RibbonCallbacks.OnGanttChartBtn" supertip="Generates a Gantt Chart visualization for the project schedule."/>
+          <button id="btnSCurveCost" label="S&#8209;Curve" image="Scurve" size="normal" onAction="RibbonCallbacks.OnSCurveBtn" supertip="Generates an S-Curve Chart."/>
+          <button id="btnManpowerHistorams" label="Manpower Historams" image="histograms-classic" size="normal" onAction="RibbonCallbacks.OnManpowerHistoramsBtn" supertip="Generates manpower histograms."/>
+        </group>
+        <group id="grpMappingSheet" label="Develop Schedule">
+            <menu id="mnuMappingSheet" label="Develop Schedule with AI (Coming Soon)" image="PlanCo_AI" size="large" supertip="This AI schedule-development workflow is coming soon.">
+                <button id="btnMappingImportBOQ" label="Master Table" image="Mapping_Master_Table" onAction="RibbonCallbacks.OnMappingImportBOQBtn" supertip="Coming soon."/>
+                <button id="btnMappingCreateTemplate" label="1. WBS Builder" image="Mapping_WBS_Builder" onAction="RibbonCallbacks.OnMappingCreateTemplateBtn" supertip="Coming soon."/>
+                <button id="btnMappingResourceBuilder" label="2. Resource Builder" image="Mapping_Resource_Builder" onAction="RibbonCallbacks.OnMappingResourceBuilderBtn" supertip="Coming soon."/>
+                <button id="btnMappingActivityBank" label="3. Activity List" image="Mapping_Activity_Bank" onAction="RibbonCallbacks.OnMappingActivityBankBtn" supertip="Coming soon."/>
+                <button id="btnMappingCreateSheet" label="4. Mapping Sheet" image="Mapping_Sheet" onAction="RibbonCallbacks.OnMappingCreateSheetBtn" supertip="Coming soon."/>
+                <button id="btnMappingEngineeringActivities" label="5. Engineering" image="Mapping_Engineering" onAction="RibbonCallbacks.OnMappingEngineeringActivitiesBtn" supertip="Coming soon."/>
+                <button id="btnMappingProcurementPlan" label="6. Procurement" image="Mapping_Procurement" onAction="RibbonCallbacks.OnMappingProcurementPlanBtn" supertip="Coming soon."/>
+                <button id="btnMappingAIRelationships" label="7. AI Relationships (Coming Soon)" image="Mapping_AI_Relationships" onAction="RibbonCallbacks.OnMappingAIRelationshipsBtn" supertip="Coming soon."/>
+                <button id="btnMappingProjectCalendar" label="8. Calendar" image="Mapping_Project_Calendar" onAction="RibbonCallbacks.OnMappingProjectCalendarBtn" supertip="Coming soon."/>
+                <button id="btnMappingExportXer" label="Export XER" image="Mapping_Export_XER" onAction="RibbonCallbacks.OnMappingExportXerBtn" supertip="Coming soon."/>
+                <button id="btnPlanCoAISettings" label="AI Settings (Coming Soon)" image="AI_Settings" onAction="RibbonCallbacks.OnPlanCoAISettingsBtn" supertip="Coming soon."/>
+            </menu>
+        </group>
+        <group id="grpXERFactory" label="XER Factory">
+            <button id="btnCompareSchedules" label="Schedule Comparison" image="comparing_logo" size="normal" onAction="RibbonCallbacks.OnCompareSchedulesBtn" supertip="Compares two schedule files (Baseline vs Update) and highlights differences."/>
+            <button id="btnDCMA" label="DCMA Check" image="Right_Check_Baseline_Schedule_Icon" size="normal" onAction="RibbonCallbacks.OnDCMABtn" supertip="Performs a DCMA 14-Point Assessment on the schedule."/>
+            <button id="btnXERViewer" label="XER Viewer" image="browser_eye_logo" size="normal" onAction="RibbonCallbacks.OnXERViewerBtn" supertip="Views and analyzes raw data from an XER file."/>
+            <button id="btnOutOfSequenceSolver" label="Out Of Sequence Solver" image="solving-problem-key" size="normal" onAction="RibbonCallbacks.OnOutOfSequenceSolverBtn" supertip="Identifies and resolves out-of-sequence activities in the schedule."/>
+            <button id="btnActivitySplitting" label="Revised Schedule" image="splitting" size="normal" onAction="RibbonCallbacks.OnActivitySplittingBtn" supertip="Splits activities based on specific criteria."/>
+            <menu id="mnuGetXERData" label="Get XER Data" image="xls_8945506" size="normal" supertip="Extract data from XER files.">
+                <button id="btnGetWBSFromXer" label="Get WBS from Xer" imageMso="ImportExcel" onAction="RibbonCallbacks.OnGetWBSFromXerBtn" supertip="Imports WBS structure from an XER file into Excel."/>
+                <button id="btnGetResourceFromXer" label="Get Resources from Xer" imageMso="ImportExcel" onAction="RibbonCallbacks.OnGetResourceFromXerBtn" supertip="Imports the resource hierarchy, type, rate, and unit of measure from an XER file into Excel."/>
+                <button id="btnPlannedValueAtDate" label="Planned Value at Date" imageMso="PercentStyle" visible="false" onAction="RibbonCallbacks.OnPlannedValueAtDateBtn" supertip="Creates an activity table from an XER file and calculates Planned % for the date selected in cell A1."/>
+            </menu>
+            <menu id="mnuCreateXERData" label="Create XER Data" image="Custom_File_Logo_Light_100px" size="normal" supertip="Create Excel templates and export WBS, Resources, or Activity Lists to XER files.">
+                <menu id="mnuCreateWbsXerData" label="WBS" image="WBS_Tree_Hierarchy" supertip="Create the WBS template, then export the prepared WBS to XER.">
+                    <button id="btnCreateWbsTemplate" label="Create WBS Template" image="Template_Icon_Logo" onAction="RibbonCallbacks.OnCreateTemplateBtn" supertip="Creates the Excel template used to prepare the WBS structure."/>
+                    <button id="btnExportXer" label="Export WBS To XER" imageMso="FileSaveAs" onAction="RibbonCallbacks.OnExportXerBtn" supertip="Exports the prepared WBS structure to a Primavera XER file."/>
+                </menu>
+                <menu id="mnuCreateResourceXerData" label="Resources" image="Manpower_Team_Logo" supertip="Create the Resource template, then export the prepared Resources to XER.">
+                    <button id="btnCreateResourceTemplate" label="Create Resource Template" image="Template_Icon_Logo" onAction="RibbonCallbacks.OnCreateResourceTemplateBtn" supertip="Creates the Excel template used to prepare Primavera resources."/>
+                    <button id="btnExportResourceXer" label="Export Resources To XER" imageMso="FileSaveAs" onAction="RibbonCallbacks.OnExportResourceXerBtn" supertip="Exports the prepared Excel resources to a Primavera XER file."/>
+                </menu>
+                <menu id="mnuCreateActivityListXerData" label="Activity List" image="Activity_List_Icon" supertip="Create the Activity List template, then export the prepared Activity Codes to XER.">
+                    <button id="btnCreateActivityListTemplate" label="Create Activity List Template" image="Template_Icon_Logo" onAction="RibbonCallbacks.OnCreateActivityListTemplateBtn" supertip="Creates the Excel template used to prepare Activity Codes."/>
+                    <button id="btnExportActivityListXer" label="Export Activity List To XER" imageMso="FileSaveAs" onAction="RibbonCallbacks.OnExportActivityListXerBtn" supertip="Exports the prepared Activity Codes to a Primavera XER file."/>
+                </menu>
+            </menu>
+            <button id="btnCalendar" label="Calendar Visualization" image="calendar_classic" size="normal" onAction="RibbonCallbacks.OnCalendarBtn" supertip="Visualizes the project calendar and working hours."/>
+            <button id="btnCreatePMS" label="Create PMS" image="Blueprint_Schematic" size="normal" onAction="RibbonCallbacks.OnPMSReportBtn" supertip="Creates a PMS Activity Report with Budget, Planned Value, and Actuals data."/>
+            <button id="btnLookahead" label="Lookahead &amp; Resources" image="Lookahead_Logo_Vision" size="normal" onAction="RibbonCallbacks.OnLookaheadBtn" supertip="Generates a Lookahead report showing activities and remaining costs up to a specified date, with optional Resource requirements."/>
+        </group>
+        <group id="grpDelayAnalysis" label="Delay Analysis">
+            <button id="btnHalfStep" label="Half Step" image="half-step-horizon-bold" size="large" onAction="RibbonCallbacks.OnHalfStepBtn" supertip="Select the previous and current updates once. PlanCo creates and schedules the Half-Step and Zero-Step XER files, then creates the delay impact analysis workbook in one workflow."/>
+        </group>
+        <group id="grpUpdate" label="Update &amp; Dashboard">
+            <menu id="mnuUpdateXer" label="Update XER" image="Update_template" size="large" supertip="Tools to create and apply XER schedule updates.">
+                <button id="btnCreateUpdateTemplate" label="Update Template" image="Update_template" onAction="RibbonCallbacks.OnCreateUpdateTemplateBtn" supertip="Creates a template for updating schedule progress."/>
+                <button id="btnScheduleUpdate" label="Update" image="progress-sync" onAction="RibbonCallbacks.OnScheduleUpdateBtn" supertip="Updates the schedule based on the populated update template."/>
+            </menu>
+            <button id="btnCreateDashboard" label="Excel Dashboard" image="dashboard-analytic" size="large" onAction="RibbonCallbacks.OnCreateDashboardBtn" supertip="Creates a project progress dashboard with KPIs, S-Curve, and photos."/>
+            <button id="btnPlanCoBI" label="PlanCo BI" image="Planco_bi_PowerI" size="large" onAction="RibbonCallbacks.OnPlanCoBIBtn" supertip="Opens the PlanCo BI Dashboard."/>
+        </group>
+        <group id="grpDatabase" label="Tools">
+            <menu id="mnuXerTools" label="XER Tools" image="p6_overlap" size="normal" supertip="XER utility tools.">
+                <button id="btnDynamicWbsProgress" label="Dynamic Progress Sheet" imageMso="PercentStyle" onAction="RibbonCallbacks.OnDynamicWbsProgressBtn" supertip="Links activity progress, Budget Total Cost, and Earned Value with dynamic formulas that roll progress up through every WBS level."/>
+                <button id="btnActivityTracker" label="Activity Tracker (Coming Soon)" image="activity-tracker" onAction="RibbonCallbacks.OnActivityTrackerBtn" supertip="This feature is coming soon."/>
+                <button id="btnUpdateZeroing" label="Update Zeroing" image="reverse-replacement" onAction="RibbonCallbacks.OnUpdateZeroingBtn" supertip="Converts an Update XER into a baseline-style XER by resetting actual progress and restoring remaining values."/>
+                <button id="btnUpdateRollback" label="Update Rollback (Coming Soon)" image="update-rollback" onAction="RibbonCallbacks.OnUpdateRollbackBtn" supertip="This feature is coming soon."/>
+                <button id="btnXERDataRemover" label="XER Data Remover" imageMso="Delete" onAction="RibbonCallbacks.OnXERDataRemoverBtn" supertip="Remove selected data from an XER file, such as relationships or resource assignments."/>
+                <button id="btnRemoveRedundantRelationships" label="Remove Redundant Relations" imageMso="RemoveDuplicates" onAction="RibbonCallbacks.OnRemoveRedundantRelationshipsBtn" supertip="Detects redundant TASKPRED relationships, lists them in Excel, then optionally creates a cleaned XER file."/>
+                <button id="btnDanglingActivitySolver" label="Dangling Activity Solver" imageMso="SmartArtAddShapeAfter" onAction="RibbonCallbacks.OnDanglingActivitySolverBtn" supertip="Detects dangling start and finish activities, lists suggested fixes in Excel, then optionally creates a solved XER file."/>
+                <button id="btnCopyTheUpdate" label="Copy the Update" imageMso="PasteSpecialDialog" onAction="RibbonCallbacks.OnCopyTheUpdateBtn" supertip="Copies update progress data (TASK and TASKRSRC) from a Source XER to a Target XER, matching activities by Activity ID."/>
+                <button id="btnFixFractions" label="Fix Fractions (Coming Soon)" imageMso="DecimalsDecrease" onAction="RibbonCallbacks.OnFixFractionsBtn" supertip="This feature is coming soon."/>
+                <menu id="mnuChangeID" label="Change Activity ID" imageMso="ReplaceDialog" supertip="Import activities from XER, edit Activity ID/Name in Excel, then export back to XER.">
+                    <button id="btnChangeIDImport" label="Import from XER" imageMso="ImportTextFile" onAction="RibbonCallbacks.OnChangeIDImportBtn" supertip="Imports Activity ID and Activity Name from TASK table into sheet 'Change ID'."/>
+                    <button id="btnChangeIDExport" label="Export to XER" imageMso="FileSaveAs" onAction="RibbonCallbacks.OnChangeIDExportBtn" supertip="Applies edited Activity ID/Name to TASK table and saves a new XER file."/>
+                </menu>
+            </menu>
+            <menu id="mnuDatabase" label="Database Tools" image="database_icon_100x100" size="normal" supertip="Database maintenance tools.">
+                <button id="btnRecoverSQLiteDatabase" label="Recover SQLite DB" image="database_icon_100x100" onAction="RibbonCallbacks.OnRecoverSQLiteDatabaseBtn" supertip="Recovers a damaged Primavera SQLite database by rebuilding a new DB with sqlite3 .recover."/>
+                <button id="btnRemoveSharedUser" label="Remove Shared User" image="user_delete" onAction="RibbonCallbacks.OnRemoveSharedUserBtn" supertip="Removes shared user locks from the project."/>
+                <button id="btnIncreaseIDLimit" label="Increase ID Limit" imageMso="SortUp" onAction="RibbonCallbacks.OnIncreaseIDLimitBtn" supertip="Increases the limit for Activity IDs."/>
+                <button id="btnResetDatabasePassword" label="Reset DB Password" imageMso="Lock" onAction="RibbonCallbacks.OnResetDatabasePasswordBtn" supertip="Creates a backup, then resets the Primavera SQLite admin password to admin."/>
+            </menu>
+            <menu id="mnuExcelTools" label="Excel Tools" image="xml_18734349" size="normal" supertip="General Excel utility tools.">
+                <button id="btnUpperCase" label="Upper Case" image="Upper_x0020_Case" onAction="RibbonCallbacks.OnUpperCaseBtn" supertip="Converts selected text to UPPER CASE."/>
+                <button id="btnLowerCase" label="Lower Case" image="Lower_x0020_Case" onAction="RibbonCallbacks.OnLowerCaseBtn" supertip="Converts selected text to lower case."/>
+                <button id="btnProperCase" label="Proper Case" image="Proper_x0020_Case" onAction="RibbonCallbacks.OnProperCaseBtn" supertip="Converts selected text to Proper Case."/>
+                <button id="btnTextToColumns" label="Text To Columns" image="Text_To_Column" onAction="RibbonCallbacks.OnTextToColumnsBtn" supertip="Splits comma-separated text into columns."/>
+                <button id="btnReplacePhotos" label="Replace Photos" image="Replace_Photos" onAction="RibbonCallbacks.OnReplacePhotosBtn" supertip="Replaces selected images in the sheet."/>
+                <button id="btnAutoFit" label="Auto Fit Column" image="AutoFit" onAction="RibbonCallbacks.OnAutoFitBtn" supertip="Auto-fits column widths for selected cells."/>
+            </menu>
+        </group>
+        <group id="grpLicense" label="License">
+            <button id="btnActivate" label="Activate Tool" imageMso="Lock" size="normal" onAction="RibbonCallbacks.OnActivateBtn" supertip="Activate the PlanCo Tool license."/>
+            <button id="btnInfo" label="Info" image="info" size="normal" onAction="RibbonCallbacks.OnInfoBtn" supertip="Show license information and status."/>
+            <button id="btnCheckUpdate" label="Check Update" image="Update" size="normal" onAction="RibbonCallbacks.OnCheckUpdateBtn" supertip="Check for the latest version of PlanCo Tool."/>
+            <button id="btnWebsite" label="Visit Website" image="Logo" size="large" onAction="RibbonCallbacks.OnWebsiteBtn" supertip="Visit the official PlanCo Tool website."/>
+            <menu id="mnuTutorials" label="Tutorials" image="youtube-classic" size="large" supertip="Open PlanCo Tool video tutorials.">
+                <menu id="mnuTutorialsWbsActions" label="WBS Actions" image="WBS_x0020_Coloring" supertip="Tutorials for WBS Actions tools.">
+                    <button id="btnTutorialWbsActions" label="WBS Actions" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=quyR3B93ht4" supertip="Open the WBS Actions tutorial."/>
+                </menu>
+                <menu id="mnuTutorialsCharts" label="Charts" imageMso="OrganizationChartInsert" supertip="Tutorials for Charts tools.">
+                    <button id="btnTutorialFlowCharts" label="Flow Charts" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=LeEe-NRyN3M" supertip="Open the Flow Charts tutorial."/>
+                    <button id="btnTutorialGanttCharts" label="Create Gantt Charts" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=SMSmuR3e1k4" supertip="Open the Gantt Charts tutorial."/>
+                    <button id="btnTutorialSCurve" label="S-Curve" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=EKlv9XAwV5c" supertip="Open the S-Curve tutorial."/>
+                    <button id="btnTutorialManpowerHistograms" label="Manpower Histograms" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=KsLlNOyOOU4" supertip="Open the Manpower Histograms tutorial."/>
+                </menu>
+                <menu id="mnuTutorialsExcelToXer" label="Excel To XER" image="Custom_File_Logo_Light_100px" supertip="Tutorials for Excel To XER tools.">
+                    <button id="btnTutorialExcelToXerPlaylist" label="Full Tutorials Playlist" image="youtube-classic" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/playlist?list=PLFYIJJcoJGYesrtij4_surNuwuGuDTCY0" supertip="Open the full playlist. No dedicated Excel To XER tutorial was found in the playlist yet."/>
+                </menu>
+                <menu id="mnuTutorialsXerFactory" label="XER Factory" image="browser_eye_logo" supertip="Tutorials for XER Factory tools.">
+                    <button id="btnTutorialScheduleComparison" label="Schedule Comparison" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=Aw7vGQHl0k0" supertip="Open the Schedule Comparison tutorial."/>
+                    <button id="btnTutorialDCMA" label="DCMA 14-Point Assessment" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=x7A2kIkzEbs" supertip="Open the DCMA tutorial."/>
+                    <button id="btnTutorialXerViewer" label="XER Viewer" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=Tc-eHnQukEA" supertip="Open the XER Viewer tutorial."/>
+                    <button id="btnTutorialCalendar" label="Calendar" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=0o7dcuuCvD0" supertip="Open the Calendar tutorial."/>
+                    <button id="btnTutorialPMS" label="PMS" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=q1cf-a8e7r8" supertip="Open the PMS tutorial."/>
+                    <button id="btnTutorialLookaheadResources" label="Lookahead &amp; Resources" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=mOXlA-IYfyY" supertip="Open the Lookahead and Resources tutorial."/>
+                </menu>
+                <menu id="mnuTutorialsUpdateDashboard" label="Update &amp; Dashboard" image="Update_template" supertip="Tutorials for Update and Dashboard tools.">
+                    <button id="btnTutorialCreateDashboard" label="Create Dashboard" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=DHl6fjfUEmE" supertip="Open the Create Dashboard tutorial."/>
+                    <button id="btnTutorialUpdateTemplateUpdate" label="Update Template &amp; Update" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=c9_dL0J52mM" supertip="Open the Update Template and Update tutorial."/>
+                    <button id="btnTutorialPowerBiConnection" label="Power BI Connection" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=45IlDkaAdB8" supertip="Open the Power BI and Primavera P6 direct connection tutorial."/>
+                </menu>
+                <menu id="mnuTutorialsTools" label="Tools" image="xml_18734349" supertip="Tutorials for Tools.">
+                    <button id="btnTutorialUpdateZeroing" label="Update Zeroing" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=YUwwQNO5SBM" supertip="Open the Update Zeroing tutorial."/>
+                    <button id="btnTutorialCopyTheUpdate" label="Copy the Update" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=R3lUpcOenpQ" supertip="Open the Copy the Update tutorial."/>
+                    <button id="btnTutorialRemoveRedundantRelations" label="Remove Redundant Relations" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=faCZFTHDRdo" supertip="Open the Remove Redundant Relations tutorial."/>
+                    <button id="btnTutorialDatabaseTools" label="Database Tools" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=1y4cS2RdoJo" supertip="Open the Database Tools tutorial."/>
+                </menu>
+                <menu id="mnuTutorialsLicense" label="License" imageMso="Lock" supertip="Tutorials for License tools.">
+                    <button id="btnTutorialInstallationOverview" label="Installation &amp; Overview" imageMso="MoviePlay" onAction="RibbonCallbacks.OnTutorialBtn" tag="https://www.youtube.com/watch?v=fRDAYzWDG6k" supertip="Open the Installation and Overview tutorial."/>
+                </menu>
+            </menu>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

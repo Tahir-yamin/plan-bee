@@ -1,0 +1,39 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+  <ribbon>
+    <tabs>
+      <tab id="tabOpenPlanCo" label="OpenPlanCo" insertAfterMso="TabHome">
+        
+        <group id="grpWbs" label="WBS Actions">
+          <button id="btnColorWBS" label="Color WBS" size="large" imageMso="ColorMenu" onAction="RibbonCallbacks.OnColorWBS" supertip="Auto-formats and colors rows based on WBS hierarchy level."/>
+          <button id="btnGroupWBS" label="Group WBS" size="normal" imageMso="OutlineGroup" onAction="RibbonCallbacks.OnGroupWBS" supertip="Groups Excel rows hierarchically by WBS depth."/>
+          <button id="btnUngroupWBS" label="Ungroup WBS" size="normal" imageMso="OutlineUngroup" onAction="RibbonCallbacks.OnUngroupWBS" supertip="Clears all row grouping."/>
+          <button id="btnSumWBS" label="Sum WBS" size="normal" imageMso="AutoSum" onAction="RibbonCallbacks.OnSumWBS" supertip="Rolls up child activity costs and units to parent WBS rows."/>
+        </group>
+
+        <group id="grpCharts" label="Charts &amp; Curves">
+          <button id="btnGantt" label="Gantt Chart" size="large" imageMso="GanttChartInsert" onAction="RibbonCallbacks.OnGanttChart" supertip="Generates an interactive Gantt chart in Excel."/>
+          <button id="btnSCurve" label="S-Curve" size="normal" imageMso="ChartLine" onAction="RibbonCallbacks.OnSCurve" supertip="Generates Planned vs Actual S-Curve progress curve."/>
+          <button id="btnHistogram" label="Manpower" size="normal" imageMso="ChartColumnClustered" onAction="RibbonCallbacks.OnManpowerHistogram" supertip="Generates resource &amp; manpower distribution histograms."/>
+        </group>
+
+        <group id="grpXerFactory" label="XER Factory">
+          <button id="btnDCMA" label="DCMA 14-Point" size="large" imageMso="ReviewAcceptChange" onAction="RibbonCallbacks.OnDCMAAudit" supertip="Audits schedule health against DCMA 14-Point standards."/>
+          <button id="btnCompare" label="Compare XERs" size="normal" imageMso="CompareDocuments" onAction="RibbonCallbacks.OnCompareXER" supertip="Compares Baseline vs Update schedules (Claim Digger)."/>
+          <button id="btnExcelToXer" label="Excel &lt;-&gt; XER" size="normal" imageMso="DatabaseTools" onAction="RibbonCallbacks.OnExcelXerConvert" supertip="Bi-directional converter between Excel and Primavera P6 XER."/>
+        </group>
+
+        <group id="grpForensics" label="Forensic TIA &amp; Tools">
+          <button id="btnTIA" label="Forensic TIA" size="large" imageMso="TimeCard" onAction="RibbonCallbacks.OnForensicTIA" supertip="Generates Half-Step and Zero-Step schedules for delay analysis."/>
+          <button id="btnCleanRedundant" label="Clean Redundant" size="normal" imageMso="DeleteRows" onAction="RibbonCallbacks.OnCleanRedundant" supertip="Removes redundant relationship logic ties (transitive reduction)."/>
+          <button id="btnZeroUpdate" label="Update Zeroing" size="normal" imageMso="Undo" onAction="RibbonCallbacks.OnZeroUpdate" supertip="Zeroes actual progress to convert update into baseline."/>
+        </group>
+
+        <group id="grpDashboards" label="Dashboard &amp; BI">
+          <button id="btnDashboard" label="KPI Dashboard" size="large" imageMso="ChartInsert" onAction="RibbonCallbacks.OnCreateDashboard" supertip="Builds an executive progress dashboard in Excel."/>
+          <button id="btnPowerBI" label="Power BI Export" size="normal" imageMso="ExportExcel" onAction="RibbonCallbacks.OnExportPowerBI" supertip="Exports clean tabular schema ready for Power BI."/>
+        </group>
+
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

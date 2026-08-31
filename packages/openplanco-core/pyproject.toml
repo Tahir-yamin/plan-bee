@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openplanco"
+version = "1.0.0"
+description = "Modern Open-Source Primavera P6 & Project Controls Toolkit (XER Parser, DCMA 14-Point, S-Curves, CPM)"
+readme = "README.md"
+authors = [{ name = "OpenPlanCo Contributors" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+    "openpyxl>=3.1.0",
+    "pydantic>=2.0.0"
+]
+
+[project.scripts]
+openplanco = "openplanco.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["openplanco*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,5 +1,5 @@
 from typing import TextIO
-from openplanco.parser.xer_parser import XERFile
+from planbee.parser.xer_parser import XERFile
 
 class XERWriter:
     @staticmethod
@@ -19,7 +19,7 @@ class XERWriter:
         if xer.header:
             stream.write(f"{xer.header}\n")
         else:
-            stream.write("ERMHDR\t20.12\t1\tEXPORT\tPROJECT\tOpenPlanCo\tAdmin\tStandard\n")
+            stream.write("ERMHDR\t20.12\t1\tEXPORT\tPROJECT\tPlanBee\tAdmin\tStandard\n")
             
         for table_name, table in xer.tables.items():
             if not table.fields or not table.records:

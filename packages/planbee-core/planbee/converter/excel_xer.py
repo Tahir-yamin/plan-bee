@@ -10,7 +10,7 @@ Translates standard spreadsheet templates containing:
 import os
 from typing import Dict, List, Any, Optional
 import openpyxl
-from openplanco.parser.xer_parser import XERFile, XERTable
+from planbee.parser.xer_parser import XERFile, XERTable
 
 class ExcelXERConverter:
     @staticmethod

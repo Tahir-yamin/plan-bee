@@ -1,5 +1,5 @@
 from typing import Dict, List, Any, Optional
-from openplanco.parser.xer_parser import XERFile
+from planbee.parser.xer_parser import XERFile
 
 class DCMAAuditor:
     def __init__(self, xer: XERFile):

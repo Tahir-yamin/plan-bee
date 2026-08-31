@@ -1,17 +1,17 @@
-# 🚀 OpenPlanCo - Open-Source Primavera P6 & Project Controls Suite
+# 🚀 PlanBee - Open-Source Primavera P6 & Project Controls Suite
 
 [![Python Version](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688.svg)](https://fastapi.tiangolo.com)
 [![Next.js](https://img.shields.io/badge/Next.js-15.0-black.svg)](https://nextjs.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**OpenPlanCo** is a modern, open-source reproduction and modernization of enterprise project planning tools (such as PlanCo Tool). It provides an all-in-one suite for **Primavera P6 XER parsing, DCMA 14-Point schedule health auditing, S-Curve generation, Schedule Comparison (Claim Digger), CPM Transitive Reduction, and Forensic Time Impact Analysis (TIA)**.
+**PlanBee** is a modern, open-source reproduction and modernization of enterprise project planning tools (such as PlanCo Tool). It provides an all-in-one suite for **Primavera P6 XER parsing, DCMA 14-Point schedule health auditing, S-Curve generation, Schedule Comparison (Claim Digger), CPM Transitive Reduction, and Forensic Time Impact Analysis (TIA)**.
 
 ---
 
 ## 📦 What's Inside (3 Delivery Options)
 
-OpenPlanCo provides complete support across three platforms:
+PlanBee provides complete support across three platforms:
 
 | Component | Technology | Description |
 | :--- | :--- | :--- |
@@ -24,10 +24,10 @@ OpenPlanCo provides complete support across three platforms:
 ## 🏛️ Monorepo Structure
 
 ```
-open-planco-tool/
+plan-bee/
 ├── packages/
-│   └── openplanco-core/              # Python Core Library & CLI
-│       ├── openplanco/
+│   └── planbee-core/              # Python Core Library & CLI
+│       ├── planbee/
 │       │   ├── parser/               # XER Parser & Writer (%T, %F, %R, %E)
 │       │   ├── analyzer/             # DCMA 14-Point Assessment
 │       │   ├── comparison/           # Schedule Comparison (Claim Digger)
@@ -35,7 +35,7 @@ open-planco-tool/
 │       │   ├── tia/                  # Forensic Half-Step & Zero-Step TIA
 │       │   ├── database/             # Primavera SQLite Recovery Tools
 │       │   └── converter/            # Excel <-> XER Bi-directional Mapping
-│       ├── cli.py                    # OpenPlanCo CLI interface
+│       ├── cli.py                    # PlanBee CLI interface
 │       └── tests/                    # Pytest test suite
 │
 ├── apps/
@@ -65,26 +65,26 @@ open-planco-tool/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/open-planco-tool.git
-cd open-planco-tool/packages/openplanco-core
+git clone https://github.com/your-username/plan-bee.git
+cd plan-bee/packages/planbee-core
 
 # Install in editable mode
 pip install -e .
 
 # Run DCMA 14-Point Audit
-openplanco audit sample_schedule.xer
+planbee audit sample_schedule.xer
 
 # Compare Baseline vs Update (Claim Digger)
-openplanco compare baseline.xer update.xer
+planbee compare baseline.xer update.xer
 
 # Eliminate redundant logic ties using CPM transitive reduction
-openplanco clean input.xer cleaned.xer
+planbee clean input.xer cleaned.xer
 
 # Zero out actuals to create a baseline from an update
-openplanco zero update.xer zeroed_baseline.xer
+planbee zero update.xer zeroed_baseline.xer
 
 # Generate Forensic TIA Half-Step and Zero-Step schedules
-openplanco tia --prev update_month1.xer --curr update_month2.xer --out-half half_step.xer --out-zero zero_step.xer
+planbee tia --prev update_month1.xer --curr update_month2.xer --out-half half_step.xer --out-zero zero_step.xer
 ```
 
 ---
@@ -120,7 +120,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to access th
 
 ## 🛡️ DCMA 14-Point Assessment Specification
 
-OpenPlanCo implements the complete 14-point audit framework:
+PlanBee implements the complete 14-point audit framework:
 
 1. **Logic**: Identifies activities missing predecessors or successors ($\le 5\%$).
 2. **Leads**: Flags negative lags ($0\%$).

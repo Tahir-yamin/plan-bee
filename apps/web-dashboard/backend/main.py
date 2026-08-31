@@ -1,5 +1,5 @@
 """
-OpenPlanCo Web Dashboard - FastAPI Backend Server
+PlanBee Web Dashboard - FastAPI Backend Server
 """
 
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
@@ -8,15 +8,15 @@ from fastapi.responses import JSONResponse, StreamingResponse
 import io
 import json
 
-from openplanco.parser.xer_parser import XERParser
-from openplanco.parser.xer_writer import XERWriter
-from openplanco.analyzer.dcma_audit import DCMAAuditor
-from openplanco.comparison.schedule_diff import ScheduleComparator
-from openplanco.network.cpm_optimizer import CPMOptimizer
-from openplanco.converter.excel_xer import ExcelXERConverter
+from planbee.parser.xer_parser import XERParser
+from planbee.parser.xer_writer import XERWriter
+from planbee.analyzer.dcma_audit import DCMAAuditor
+from planbee.comparison.schedule_diff import ScheduleComparator
+from planbee.network.cpm_optimizer import CPMOptimizer
+from planbee.converter.excel_xer import ExcelXERConverter
 
 app = FastAPI(
-    title="OpenPlanCo API",
+    title="PlanBee API",
     description="REST API for Primavera P6 XER parsing, DCMA 14-Point Audits, S-Curves, and Schedule Comparison",
     version="1.0.0"
 )
@@ -31,7 +31,7 @@ app.add_middleware(
 
 @app.get("/")
 def root():
-    return {"message": "OpenPlanCo Backend API is running."}
+    return {"message": "PlanBee Backend API is running."}
 
 @app.post("/api/parse-xer")
 async def parse_xer(file: UploadFile = File(...)):

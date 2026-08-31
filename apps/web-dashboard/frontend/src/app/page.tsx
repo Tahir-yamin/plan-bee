@@ -51,7 +51,7 @@ export default function Dashboard() {
         <div className="flex items-center gap-3">
           <div className="bg-emerald-500/10 p-2 rounded-xl border border-emerald-500/20 text-emerald-400 font-bold flex items-center gap-2">
             <Layers className="w-5 h-5" />
-            <span className="text-lg tracking-wide">OpenPlanCo</span>
+            <span className="text-lg tracking-wide">PlanBee</span>
           </div>
           <span className="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded-full border border-slate-700">v1.0.0 Open Source</span>
         </div>

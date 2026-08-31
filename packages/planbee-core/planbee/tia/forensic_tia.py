@@ -6,7 +6,7 @@ to isolate contractor vs employer delays.
 
 from typing import Tuple
 import copy
-from openplanco.parser.xer_parser import XERFile
+from planbee.parser.xer_parser import XERFile
 
 class ForensicTIA:
     @staticmethod

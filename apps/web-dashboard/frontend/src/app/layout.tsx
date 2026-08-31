@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "OpenPlanCo - Primavera P6 & Project Controls Suite",
+  title: "PlanBee - Primavera P6 & Project Controls Suite",
   description: "Modern open-source web platform for Primavera P6 XER analytics, DCMA 14-Point audits, S-Curves, and Schedule Comparison",
 };
 

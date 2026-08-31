@@ -44,7 +44,7 @@ Public Sub ColorWbsHierarchy()
     Next r
     
     Application.ScreenUpdating = True
-    MsgBox "WBS coloring applied successfully!", vbInformation, "OpenPlanCo"
+    MsgBox "WBS coloring applied successfully!", vbInformation, "PlanBee"
 End Sub
 
 Public Sub GroupWbsRows()
@@ -74,7 +74,7 @@ Public Sub GroupWbsRows()
     
     ws.Outline.ShowLevels RowLevels:=2
     Application.ScreenUpdating = True
-    MsgBox "WBS grouping created successfully!", vbInformation, "OpenPlanCo"
+    MsgBox "WBS grouping created successfully!", vbInformation, "PlanBee"
 End Sub
 
 Public Sub UngroupWbsRows()
@@ -83,5 +83,5 @@ Public Sub UngroupWbsRows()
     On Error Resume Next
     ws.Cells.ClearOutline
     On Error GoTo 0
-    MsgBox "WBS outlines cleared.", vbInformation, "OpenPlanCo"
+    MsgBox "WBS outlines cleared.", vbInformation, "PlanBee"
 End Sub

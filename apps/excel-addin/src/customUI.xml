@@ -1,7 +1,7 @@
 <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
   <ribbon>
     <tabs>
-      <tab id="tabOpenPlanCo" label="OpenPlanCo" insertAfterMso="TabHome">
+      <tab id="tabPlanBee" label="PlanBee" insertAfterMso="TabHome">
         
         <group id="grpWbs" label="WBS Actions">
           <button id="btnColorWBS" label="Color WBS" size="large" imageMso="ColorMenu" onAction="RibbonCallbacks.OnColorWBS" supertip="Auto-formats and colors rows based on WBS hierarchy level."/>

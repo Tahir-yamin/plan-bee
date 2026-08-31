@@ -1,14 +1,14 @@
 import os
 import pytest
-from openplanco.parser.xer_parser import XERParser, XERFile
-from openplanco.parser.xer_writer import XERWriter
-from openplanco.analyzer.dcma_audit import DCMAAuditor
-from openplanco.comparison.schedule_diff import ScheduleComparator
-from openplanco.network.cpm_optimizer import CPMOptimizer
-from openplanco.tia.forensic_tia import ForensicTIA
-from openplanco.converter.excel_xer import ExcelXERConverter
+from planbee.parser.xer_parser import XERParser, XERFile
+from planbee.parser.xer_writer import XERWriter
+from planbee.analyzer.dcma_audit import DCMAAuditor
+from planbee.comparison.schedule_diff import ScheduleComparator
+from planbee.network.cpm_optimizer import CPMOptimizer
+from planbee.tia.forensic_tia import ForensicTIA
+from planbee.converter.excel_xer import ExcelXERConverter
 
-BASELINE_XER = """ERMHDR\t20.12\t1\tEXPORT\tPROJECT\tOpenPlanCo\tAdmin\tStandard
+BASELINE_XER = """ERMHDR\t20.12\t1\tEXPORT\tPROJECT\tPlanBee\tAdmin\tStandard
 %T\tPROJECT
 %F\tproj_id\tproj_short_name
 %R\t100\tPROJ_A
@@ -24,7 +24,7 @@ BASELINE_XER = """ERMHDR\t20.12\t1\tEXPORT\tPROJECT\tOpenPlanCo\tAdmin\tStandard
 %E
 """
 
-UPDATE_XER = """ERMHDR\t20.12\t1\tEXPORT\tPROJECT\tOpenPlanCo\tAdmin\tStandard
+UPDATE_XER = """ERMHDR\t20.12\t1\tEXPORT\tPROJECT\tPlanBee\tAdmin\tStandard
 %T\tPROJECT
 %F\tproj_id\tproj_short_name
 %R\t100\tPROJ_A

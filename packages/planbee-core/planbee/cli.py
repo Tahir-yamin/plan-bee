@@ -1,30 +1,30 @@
 """
-Command-Line Interface (CLI) for OpenPlanCo.
+Command-Line Interface (CLI) for PlanBee.
 Usage:
-    openplanco audit <file.xer> [--output json/text]
-    openplanco compare <baseline.xer> <update.xer>
-    openplanco clean <input.xer> <output.xer>
-    openplanco zero <input.xer> <output.xer>
-    openplanco to-excel <input.xer> <output.xlsx>
-    openplanco to-xer <input.xlsx> <output.xer>
-    openplanco tia --prev <prev.xer> --curr <curr.xer> --out-half <half.xer> --out-zero <zero.xer>
+    planbee audit <file.xer> [--output json/text]
+    planbee compare <baseline.xer> <update.xer>
+    planbee clean <input.xer> <output.xer>
+    planbee zero <input.xer> <output.xer>
+    planbee to-excel <input.xer> <output.xlsx>
+    planbee to-xer <input.xlsx> <output.xer>
+    planbee tia --prev <prev.xer> --curr <curr.xer> --out-half <half.xer> --out-zero <zero.xer>
 """
 
 import argparse
 import sys
 import json
-from openplanco.parser.xer_parser import XERParser
-from openplanco.parser.xer_writer import XERWriter
-from openplanco.analyzer.dcma_audit import DCMAAuditor
-from openplanco.comparison.schedule_diff import ScheduleComparator
-from openplanco.network.cpm_optimizer import CPMOptimizer
-from openplanco.tia.forensic_tia import ForensicTIA
-from openplanco.converter.excel_xer import ExcelXERConverter
+from planbee.parser.xer_parser import XERParser
+from planbee.parser.xer_writer import XERWriter
+from planbee.analyzer.dcma_audit import DCMAAuditor
+from planbee.comparison.schedule_diff import ScheduleComparator
+from planbee.network.cpm_optimizer import CPMOptimizer
+from planbee.tia.forensic_tia import ForensicTIA
+from planbee.converter.excel_xer import ExcelXERConverter
 
 def main():
     parser = argparse.ArgumentParser(
-        prog="openplanco",
-        description="OpenPlanCo - Modern Primavera P6 & Project Controls Toolkit"
+        prog="planbee",
+        description="PlanBee - Modern Primavera P6 & Project Controls Toolkit"
     )
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
 

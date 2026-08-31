@@ -10,7 +10,7 @@ Includes:
 
 from typing import Dict, List, Set, Tuple, Any, Optional
 import copy
-from openplanco.parser.xer_parser import XERFile, XERTable
+from planbee.parser.xer_parser import XERFile, XERTable
 
 class CPMOptimizer:
     def __init__(self, xer: XERFile):

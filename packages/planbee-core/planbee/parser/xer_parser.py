@@ -26,7 +26,7 @@ class XERTable:
 
 class XERFile:
     def __init__(self):
-        self.header: str = "ERMHDR\t20.12\t1\tEXPORT\tPROJECT\tOpenPlanCo Engine\tAdministrator\tStandard"
+        self.header: str = "ERMHDR\t20.12\t1\tEXPORT\tPROJECT\tPlanBee Engine\tAdministrator\tStandard"
         self.tables: Dict[str, XERTable] = {}
         
     def get_table(self, name: str) -> Optional[XERTable]:

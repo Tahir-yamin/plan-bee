@@ -1,10 +1,10 @@
 import pytest
-from openplanco.parser.xer_parser import XERParser, XERFile
-from openplanco.parser.xer_writer import XERWriter
-from openplanco.analyzer.dcma_audit import DCMAAuditor
-from openplanco.network.cpm_optimizer import CPMOptimizer
+from planbee.parser.xer_parser import XERParser, XERFile
+from planbee.parser.xer_writer import XERWriter
+from planbee.analyzer.dcma_audit import DCMAAuditor
+from planbee.network.cpm_optimizer import CPMOptimizer
 
-SAMPLE_XER = """ERMHDR	20.12	1	EXPORT	PROJECT	OpenPlanCo	Admin	Standard
+SAMPLE_XER = """ERMHDR	20.12	1	EXPORT	PROJECT	PlanBee	Admin	Standard
 %T	PROJECT
 %F	proj_id	proj_short_name
 %R	100	SAMPLE_PROJ

@@ -5,7 +5,7 @@ detailed variance reports on activities, logic ties, dates, durations, and costs
 """
 
 from typing import Dict, List, Any, Optional
-from openplanco.parser.xer_parser import XERFile
+from planbee.parser.xer_parser import XERFile
 
 class ScheduleComparator:
     def __init__(self, baseline_xer: XERFile, update_xer: XERFile):
